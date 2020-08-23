@@ -1,0 +1,179 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
+             prism:ViewModelLocator.AutowireViewModel="True"
+             x:Class="LandBankOfThePhillipinesTLC.Views.HomePage">
+    <ContentPage.Content>
+        <StackLayout>
+            <StackLayout Grid.Row="0" VerticalOptions="StartAndExpand" HorizontalOptions="CenterAndExpand" Margin="10,1,10,20" Padding="0">
+                                <Grid>
+                                <Grid Grid.Column="3" Grid.ColumnSpan="1" Margin="1,10,1,1">
+                                    <ImageButton
+                                    Source="logout.png"
+                                        BackgroundColor="Transparent"
+                                    Command="{Binding LogoutImageCommand}"/>
+                                </Grid>
+                                <Grid Grid.ColumnSpan="2" >
+                                </Grid>
+                                </Grid>
+                 </StackLayout>
+            <ScrollView>
+            <StackLayout>
+                <StackLayout Margin="1,5,1,1" VerticalOptions="Center" HorizontalOptions="CenterAndExpand">
+               
+                    <Label Text="{Binding daytodayDisplay}" TextColor="Black"></Label>
+                    <Label Text="{Binding displayTime,StringFormat='{0:T}'}" FontSize="Large" TextColor="Black"></Label>
+                </StackLayout>
+
+                <Grid Margin="20, 0, 20, 0" > 
+                    <Label Text="ScanNumber: "
+                           FontSize="Medium"
+                           TextColor="Black"
+                           Grid.Column="0"
+                           Grid.Row="0"
+                           HorizontalOptions="Start"/>
+
+                    <Label Text="{Binding ScanNumber}"
+                           FontSize="Medium"
+                           TextColor="Black"
+                           Grid.Column="0"
+                           Grid.Row="0"
+                           HorizontalOptions="End"/>
+                </Grid>
+                <Grid Margin="20, 0, 20, 0">
+                    <Label Text="Date:  "
+                           FontSize="Medium"
+                           TextColor="Black"
+                           Grid.Column="0" Grid.Row="0" />
+
+                    <Label Text="{Binding DateProp}"
+                           FontSize="Medium"
+                           Grid.Column="0"
+                           Grid.Row="0"
+                           TextColor="Black"
+                           VerticalOptions="StartAndExpand"
+                           HorizontalOptions="End"/>
+                </Grid>
+                <Grid Margin="20, 0, 20, 0">
+                    <Label Text="Time:  "
+                           FontSize="Medium"
+                           TextColor="Black"
+                           Grid.Column="0" Grid.Row="0" />
+
+                    <Label Text="{Binding TimeProp}"
+                           FontSize="Medium"
+                           Grid.Column="0"
+                           Grid.Row="0"
+                           TextColor="Black"
+                           VerticalOptions="StartAndExpand"
+                           HorizontalOptions="End"/>
+                </Grid>
+                <Grid Margin="20, 0, 20, 0">
+                    <Label Text="FullName: "
+                           HorizontalOptions="Start"
+                           FontSize="Medium"
+                           Grid.Column="0"
+                           Grid.Row="0"
+                           TextColor="Black"
+                           Margin="1,1,1,1"/>
+
+                    <Label Text="{Binding FnameProp}"
+                           Grid.Column="1"
+                           FontSize="Medium"
+                           TextColor="Black"
+                           Grid.Row="0"
+                           HorizontalOptions="End"/>
+                </Grid>
+
+                <Grid Margin="20, 0, 20, 0">
+
+                    <Label Text="Coordinates: "
+                           VerticalOptions="EndAndExpand"
+                           FontSize="Medium"
+                           TextColor="Black"
+                           HorizontalOptions="Start"
+                           Grid.Column="0"
+                           Grid.Row="0"/>
+
+                    <Label Text="{Binding Geolocator}"
+                           VerticalOptions="StartAndExpand"
+                           FontSize="Medium"
+                           TextColor="Black"
+                           HorizontalOptions="End"
+                           Margin="1,1,1,1"
+                           Grid.Column="0"
+                           Grid.Row="0"/>
+                </Grid>
+
+                    <Button VerticalOptions="Start"
+                          Text="Check In"
+                          Command="{Binding CheckInCommand}"
+                            CornerRadius="10"
+                           FontAttributes="Bold"
+                           FontSize="Large"
+                           Margin="20, 15, 20, 0"
+                           TextColor="Black"
+                           BackgroundColor="LightBlue"
+                           HorizontalOptions="FillAndExpand"/>
+
+                    <Button VerticalOptions="Start"
+                          Text="Lunch Out"
+                          Command="{Binding LunchOutCommand}"
+                            CornerRadius="10"
+                           FontAttributes="Bold"
+                           FontSize="Large"
+                           Margin="20, 15, 20, 0"
+                           TextColor="Black"
+                           BackgroundColor="LightBlue"
+                           HorizontalOptions="FillAndExpand" />
+
+                    <Button VerticalOptions="Start"
+                          Text="Lunch In"
+                          Command="{Binding LunchInCommand}"
+                            CornerRadius="10"
+                           FontAttributes="Bold"
+                           FontSize="Large"
+                           Margin="20, 15, 20, 0"
+                           TextColor="Black"
+                           BackgroundColor="LightBlue"
+                           HorizontalOptions="FillAndExpand"/>
+
+                    <Button VerticalOptions="Start"
+                          Text="Check Out"
+                          Command="{Binding CheckOutCommand}"
+                           CornerRadius="10"
+                           FontAttributes="Bold"
+                           FontSize="Large"
+                           Margin="20, 15, 20, 0"
+                           TextColor="Black"
+                           BackgroundColor="LightBlue"
+                           HorizontalOptions="FillAndExpand"/>
+
+                    <Button VerticalOptions="Start"
+                          Text="OT In"
+                          Command="{Binding OTinCommand}"
+                            CornerRadius="10"
+                           FontAttributes="Bold"
+                           FontSize="Large"
+                           Margin="20, 15, 20, 0"
+                           TextColor="Black"
+                           BackgroundColor="LightBlue"
+                           HorizontalOptions="FillAndExpand" />
+
+                    <Button VerticalOptions="Start"
+                          Text="OT Out"
+                          Command="{Binding OTOutCommand}"
+                            CornerRadius="10"
+                           FontAttributes="Bold"
+                           FontSize="Large"
+                           Margin="20, 15, 20, 0"
+                           TextColor="Black"
+                           BackgroundColor="LightBlue"
+                           HorizontalOptions="FillAndExpand"/>
+
+            </StackLayout>
+        </ScrollView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

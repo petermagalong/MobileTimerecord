@@ -1,0 +1,30 @@
+﻿<Properties StartupConfiguration="{ACFDB196-D455-4DF8-88A9-CB568B7F292A}|Default">
+  <MonoDevelop.Ide.ItemProperties.LandBankOfThePhillipinesTLC.Android AndroidDesignerPreferredTheme="Theme.AppCompat.Light.NoActionBar" PreferredExecutionTarget="Android.Android_Accelerated_Oreo" />
+  <MonoDevelop.Ide.Workbench>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="LandBankOfThePhillipinesTLC" expanded="True">
+            <Node name="LandBankOfThePhillipinesTLC" expanded="True">
+              <Node name="ViewModels" expanded="True">
+                <Node name="Base" expanded="True" />
+              </Node>
+              <Node name="Views" expanded="True">
+                <Node name="LoginPage.xaml" expanded="True" />
+              </Node>
+            </Node>
+            <Node name="LandBankOfThePhillipinesTLC.Android" expanded="True">
+              <Node name="PlatformSpecific  " expanded="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Release" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>

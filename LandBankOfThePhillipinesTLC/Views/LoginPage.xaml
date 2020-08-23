@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
+             prism:ViewModelLocator.AutowireViewModel="True"
+             x:Class="LandBankOfThePhillipinesTLC.Views.LoginPage">
+    <ContentPage.Content>
+       <Grid>
+
+           <StackLayout Margin="20, 0, 20, 0"
+                        HorizontalOptions="FillAndExpand"
+                        VerticalOptions="CenterAndExpand">
+               <Image Source="LBP.png" Margin="20,30,20,30"/>
+               <Label  Text="Username" Margin="20, 0, 20, 0"/>
+
+               <Entry  Text="{Binding UserName}"
+                       Placeholder="Username"
+                       HorizontalOptions="FillAndExpand"
+                       PlaceholderColor="Black"
+                       CursorPosition="2"
+                       Margin="20, 0, 20, 0"
+                       SelectionLength="10"/>
+
+               <Label  Text="Password" Margin="20, 0, 20, 0"/>
+
+               <Entry  Text="{Binding Password}"
+                       Placeholder="Password"
+                       HorizontalOptions="FillAndExpand"
+                       PlaceholderColor="Black"
+                       Margin="20, 5, 20, 0"
+                       IsPassword="True"/>
+
+               <Button Text="Login"
+                       Command="{Binding LoginCommand}"
+                       CornerRadius="10"
+                       FontAttributes="Bold"
+                       FontSize="Large"
+                       Margin="20, 15, 20, 0"
+                       TextColor="Black"
+                       BackgroundColor="LightBlue"
+                       HorizontalOptions="FillAndExpand" />
+
+               
+            </StackLayout>
+       </Grid>
+    </ContentPage.Content>
+</ContentPage>
